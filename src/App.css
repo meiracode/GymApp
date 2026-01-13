@@ -796,15 +796,17 @@ li {
   align-items: center;
 }
 
-/*PHONE/TABLET*/
+/* PHONE / TABLET */
 @media (max-width: 800px) {
   .home-main-row {
     flex-direction: column;
     gap: 20px;
+    padding-left: 20px;
   }
 
   .home-left {
     max-width: 100%;
+    
   }
 
   .home-right {
@@ -824,7 +826,7 @@ li {
 
   .progress-wrap {
     justify-content: center;
-    flex-wrap: nowrap; 
+    flex-wrap: nowrap;
   }
 
   .progress-svg {
@@ -837,6 +839,7 @@ li {
     max-width: 520px;
   }
 }
+
 .sidebar-toggle {
   display: none;
   position: fixed;
@@ -845,15 +848,20 @@ li {
   z-index: 5000;
   border: none;
   border-radius: 999px;
-  padding: 10px 14px;
+  padding: 16px 19px;
   background: rgba(40, 34, 68, 0.75);
   color: white;
   cursor: pointer;
   backdrop-filter: blur(6px);
+  font-size: 20px;
 }
+
 
 .sidebar-overlay {
   display: none;
+}
+.title-span {
+  padding-left: 15px;
 }
 
 .sidebar-close {
@@ -910,6 +918,6 @@ li {
   }
 
   .page-content {
-    padding-top: 64px;
+    padding-top: 85px;
   }
 }
