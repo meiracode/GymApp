@@ -3,17 +3,16 @@ import { supabase } from "../lib/supabaseClient";
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {
-  // lets us redirect the user after login (like sending them to the home page)
+  // redirect the user after login
   const navigate = useNavigate();
 
   // form fields
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  // "login" = sign in, "signup" = create account
+  //login/sign up states
   const [mode, setMode] = useState("login");
 
-  // used to disable buttons + show "Loading..." while request is happening
+  // used to disable buttons and show loading while request is being processed
   const [loading, setLoading] = useState(false);
 
   // message shown under the form (errors or success)
@@ -22,7 +21,7 @@ export default function Login() {
   const handleAuth = async (e) => {
     e.preventDefault();
 
-    // basic input validation before we even hit supabase
+    // basic input validation before we hit supabase
     const cleanEmail = email.trim();
 
     if (!cleanEmail || !password) {
@@ -41,14 +40,14 @@ export default function Login() {
           password,
         });
 
-        // supabase returns "error" instead of throwing automatically
+        // supabase returns "error" instead of throwing
         if (error) throw error;
 
         // if email confirmations are enabled, user may need to confirm before login works
         setMsg("Account created. If prompted, check your email to confirm.");
         setMode("login");
       } else {
-        // sign in an existing user using email + password
+        // sign in an existing user
         const { error } = await supabase.auth.signInWithPassword({
           email: cleanEmail,
           password,
@@ -56,7 +55,7 @@ export default function Login() {
 
         if (error) throw error;
 
-        // successful login -> take them to home
+        // take them to home
         navigate("/", { replace: true });
       }
     } catch (err) {
@@ -70,7 +69,7 @@ export default function Login() {
 
   return (
     <div className="login-page">
-      {/* only show the "Create account" toggle button when we're in login mode */}
+      {/* only show create account when we're in login mode */}
       {mode === "login" && (
         <button
           className="create-acc"
