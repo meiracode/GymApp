@@ -1,20 +1,21 @@
-# RealFit
+# Description
 
-RealFit is a personal fitness tracking web app that lets users log workouts, track personal records, store health statistics, and write goal notes over time.
+This web application is a personal fitness log that lets users input workouts, track personal records, log basic health statistics, and set personal goals. We also offer some exercise examples and guidance for those who do not know where to start, and a visual of what percentage of the month was spent being active. 
 
 ## Features
 - User authentication (Supabase)
-- Workout logging (strength + cardio)
-- Personal records tracking
-- Health stats logging (weight, height)
-- Goal notes with history
-- Monthly progress visualization
+- Workout log (strength training + cardio)
+- Automatically calculates and displays Personal Records (highest weight + reps)
+- Health statistics log (weight + height)
+- Set Goals and view goals history
+- Monthly progress visual
 
 ## Tech Stack
 - React
 - Supabase (Auth + Database)
 - FontAwesome
-- CSS
+- HTML + CSS
+- JavaScript
 
 # Getting Started with Create React App
 
