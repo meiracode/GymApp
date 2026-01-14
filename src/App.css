@@ -952,26 +952,21 @@ li {
     padding-top: 85px;
   }
 }
-@media (hover: none) and (pointer: coarse) {
-  button,
-  a,
-  .btn,
-  .nav-item,
-  .exercise-link {
-    transition: none !important;
-  }
-
-  button:hover,
-  a:hover,
-  .btn:hover,
-  .nav-item:hover,
-  .exercise-link:hover {
-    transform: none !important;
-    background: inherit !important;
-    box-shadow: none !important;
-  }
-}
 button,
 a {
   touch-action: manipulation;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  * {
+    transition: none !important;
+  }
+
+  *:hover {
+    background: inherit !important;
+    color: inherit !important;
+    box-shadow: none !important;
+    transform: none !important;
+    filter: none !important;
+  }
 }
