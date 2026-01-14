@@ -952,21 +952,3 @@ li {
     padding-top: 85px;
   }
 }
-button,
-a {
-  touch-action: manipulation;
-}
-
-@media (hover: none) and (pointer: coarse) {
-  * {
-    transition: none !important;
-  }
-
-  *:hover {
-    background: inherit !important;
-    color: inherit !important;
-    box-shadow: none !important;
-    transform: none !important;
-    filter: none !important;
-  }
-}
