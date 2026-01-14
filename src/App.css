@@ -212,7 +212,10 @@ p {
 }
 
 .big-action-sub {
-  color: #d0c8e8;
+  color: #e1d4fb;
+  font-weight: 600;
+  margin-top: 8px;
+  font-size: 15px;
 }
 
 .whole-card {
@@ -411,7 +414,7 @@ p {
 }
 
 .exercise-link:hover .leg-icon {
-  color: rgb(188, 5, 255);
+  color:#f892ff;
   transition: color 0.2s ease;
 }
 
@@ -505,6 +508,20 @@ li {
   justify-content: center;
   align-items: center;
   padding: 24px;
+}
+
+.h1-push-icon {
+  margin-right: 12px;
+  color:#39a6fe;
+}
+
+.h1-pull-icon {
+  margin-right: 12px;
+  color:#1fff1f;
+}
+
+.legs-title-icon {
+  color:#f892ff;
 }
 
 .login-card {
@@ -797,11 +814,12 @@ li {
 }
 
 /* PHONE / TABLET */
+
 @media (max-width: 800px) {
   .home-main-row {
     flex-direction: column;
     gap: 20px;
-    padding-left: 20px;
+    padding-left: 5px;
   }
 
   .home-left {
@@ -824,10 +842,12 @@ li {
     width: 100%;
   }
 
+
   .progress-wrap {
     justify-content: center;
     flex-wrap: nowrap;
   }
+
 
   .progress-svg {
     max-width: 100%;
@@ -849,10 +869,9 @@ li {
   border: none;
   border-radius: 999px;
   padding: 16px 19px;
-  background: rgba(40, 34, 68, 0.75);
+  background: rgba(40, 34, 68, 0.913);
   color: white;
   cursor: pointer;
-  backdrop-filter: blur(6px);
   font-size: 20px;
 }
 
@@ -861,7 +880,8 @@ li {
   display: none;
 }
 .title-span {
-  padding-left: 15px;
+  padding-left: 0%;
+  margin-right: -17px;
 }
 
 .sidebar-close {
@@ -892,7 +912,7 @@ li {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 260px;
+    width: 240px;
     z-index: 5100;
     transform: translateX(-110%);
     transition: transform 220ms ease;
@@ -902,6 +922,13 @@ li {
     transform: translateX(0);
   }
 
+    h1 {
+    font-size: 30px;
+  }
+
+  .goals-title {
+    font-size: 25px;
+  }
   .sidebar-overlay {
     display: block;
     position: fixed;
@@ -909,6 +936,10 @@ li {
     z-index: 5050;
     border: none;
     background: rgba(0, 0, 0, 0.45);
+  }
+
+  .chart-icon {
+    font-size: 35px;
   }
 
   .sidebar-close {
@@ -920,4 +951,27 @@ li {
   .page-content {
     padding-top: 85px;
   }
+}
+@media (hover: none) and (pointer: coarse) {
+  button,
+  a,
+  .btn,
+  .nav-item,
+  .exercise-link {
+    transition: none !important;
+  }
+
+  button:hover,
+  a:hover,
+  .btn:hover,
+  .nav-item:hover,
+  .exercise-link:hover {
+    transform: none !important;
+    background: inherit !important;
+    box-shadow: none !important;
+  }
+}
+button,
+a {
+  touch-action: manipulation;
 }
