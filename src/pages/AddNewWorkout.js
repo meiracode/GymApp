@@ -338,7 +338,6 @@ export default function AddNewWorkout() {
             </button>
           </div>
 
-          {/* kept ONE save button (removed the duplicate below) */}
           <button className="workout-btn" type="button" onClick={handleSave}>
             Save
           </button>
@@ -372,7 +371,12 @@ export default function AddNewWorkout() {
             rows={4}
           />
 
-          {/* deleted redundant second Save button here */}
+          <button className="workout-btn" type="button" onClick={handleSave}>
+            Save
+          </button>
+
+          <div className="divider" />
+
         </div>
       </div>
 

@@ -403,14 +403,25 @@ p {
   font-size: 45px;
 }
 
+.push-icon {
+    color: rgb(4, 175, 237);
+}
 .exercise-link:hover .push-icon {
   color: rgb(4, 175, 237);
   transition: color 0.2s ease;
+}
+.pull-icon {
+    color: rgb(5, 255, 80);
 }
 
 .exercise-link:hover .pull-icon {
   color: rgb(5, 255, 80);
   transition: color 0.2s ease;
+}
+
+.leg-icon {
+    color:#f892ff;
+
 }
 
 .exercise-link:hover .leg-icon {
